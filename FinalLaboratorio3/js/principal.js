@@ -8,7 +8,15 @@ $(document).ready(function(){
 
     $(".envioPequeñoTexto").hide();
     
+
+    
     $(".listasProductos").click(function(){
+        if($("#flechasProd").text() == "expand_less"){
+            document.getElementById("flechasProd").innerHTML = "expand_more";    
+        }
+        else{
+            document.getElementById("flechasProd").innerHTML = "expand_less";
+        }
         $(".listaLado").toggle(1000);
     });
 
@@ -110,57 +118,114 @@ function insertarNav(){
     var unaBarra = "../";
 
     var dosBarras = "../../";
+
+    var linkConsulta = "Consulta.aspx";
+
+    var linkTrabaja = "TrabajaConNosotros.aspx";
+
+    var linkIngresa = "Ingresa.aspx";
+
+    var linkPrincipal = "Principal/principal.html";
+
+    var linkBarraMbs = "mbs/sobreMBS.html";
+
+    var linkEnvio = "servicios/envio.html";
+
+    var linkVenta = "servicios/venta.html";
+ 
+    var linkAtencion = "ayuda/atencion.html";
+
+    var linkOpinion = "ayuda/opinion.html";
+
+    var linkTrabaja = "trabajaConNosotros.aspx";
+
+    var html = "html/";
+
+    var retorno = "";
     
-    if(document.getElementById("barraCamas") != null){
-        navEditado("barraCamas", dosBarras);
+    if(document.getElementById("barraCamas") != null && document.getElementById("pieCamas") != null){
+        navEditado("barraCamas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+        pieEditado("pieCamas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraAtencion") != null){
-         navEditado("barraAtencion", unaBarra);
+    if(document.getElementById("barraAtencion") != null && document.getElementById("pieAtencion") != null){
+         navEditado("barraAtencion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieAtencion", unaBarra + linkEnvio, unaBarra + linkVenta, retorno, unaBarra + linkOpinion, unaBarra + linkTrabaja);
     }
-    if(document.getElementById("barraOpinion") != null){
-         navEditado("barraOpinion", unaBarra);
+    if(document.getElementById("barraOpinion") != null && document.getElementById("pieOpinion") != null){
+         navEditado("barraOpinion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieOpinion", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, retorno, unaBarra + linkTrabaja);
     }
-    if(document.getElementById("barraMBS") != null){
-         navEditado("barraMBS", unaBarra);
+    if (document.getElementById("barraMBS") != null && document.getElementById("pieSobre") != null) {
+        navEditado("barraMBS", unaBarra + linkPrincipal, retorno, dosBarras + linkConsulta);
+         pieEditado("pieSobre", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
     }
-    if(document.getElementById("barraAlacena") != null){
-         navEditado("barraAlacena", dosBarras);
+    if(document.getElementById("barraAlacena") != null && document.getElementById("pieAlacena") != null){
+         navEditado("barraAlacena", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieAlacena", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraMesada") != null){
-         navEditado("barraMesada", dosBarras);
+    if(document.getElementById("barraMesada") != null && document.getElementById("pieMesada") != null){
+         navEditado("barraMesada", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieMesada", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraCocina") != null){
-         navEditado("barraCocina", dosBarras);
+    if(document.getElementById("barraCocina") != null && document.getElementById("pieCocina") != null){
+         navEditado("barraCocina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieCocina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraDespensero") != null){
-         navEditado("barraDespensero", dosBarras);
+    if(document.getElementById("barraDespensero") != null && document.getElementById("pieDespensero") != null){
+         navEditado("barraDespensero", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieDespensero", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraDormitorio") != null){
-         navEditado("barraDormitorio", dosBarras);
+    if(document.getElementById("barraDormitorio") != null && document.getElementById("pieDormitorio") != null){
+         navEditado("barraDormitorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieDormitorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraMesas") != null){
-         navEditado("barraMesas", dosBarras);
+    if(document.getElementById("barraMesas") != null && document.getElementById("pieMesas") != null){
+         navEditado("barraMesas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieMesas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraPlacares") != null){
-         navEditado("barraPlacares", dosBarras);
+    if(document.getElementById("barraPlacares") != null && document.getElementById("piePlacares") != null){
+         navEditado("barraPlacares", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("piePlacares", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraBibliotecas") != null){
-         navEditado("barraBibliotecas", dosBarras);
+    if(document.getElementById("barraBibliotecas") != null && document.getElementById("pieBibliotecas") != null){
+         navEditado("barraBibliotecas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieBibliotecas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraEscritorio") != null){
-         navEditado("barraEscritorio", dosBarras);
+    if(document.getElementById("barraEscritorio") != null && document.getElementById("pieEscritorio") != null){
+         navEditado("barraEscritorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieEscritorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraOficina") != null){
-         navEditado("barraOficina", dosBarras);
+    if(document.getElementById("barraOficina") != null && document.getElementById("pieOficina") != null){
+         navEditado("barraOficina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieOficina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraSillas") != null){
-         navEditado("barraSillas", dosBarras);
+    if(document.getElementById("barraSillas") != null && document.getElementById("pieSillas") != null){
+         navEditado("barraSillas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieSillas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
     }
-    if(document.getElementById("barraEnvio") != null){
-         navEditado("barraEnvio", unaBarra);
+    if(document.getElementById("barraEnvio") != null && document.getElementById("pieEnvio") != null){
+         navEditado("barraEnvio", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieEnvio", retorno, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
     }
-    if(document.getElementById("barraVenta") != null){
-         navEditado("barraVenta", unaBarra);
+    if(document.getElementById("barraVenta") != null && document.getElementById("pieVenta") != null){
+         navEditado("barraVenta", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("pieVenta", unaBarra + linkEnvio, retorno, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+    }
+    if(document.getElementById("barraPrincipal") != null && document.getElementById("piePrincipal") != null){
+         navEditado("barraPrincipal", retorno, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
+         pieEditado("piePrincipal", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+    }
+    if (document.getElementById("barraConsulta") != null && document.getElementById("pieConsulta") != null) {
+        navEditado("barraConsulta", html + linkPrincipal, html + linkBarraMbs, retorno);
+        pieEditado("pieConsulta", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, html + linkTrabaja);
+    }
+    if (document.getElementById("barraIngresa") != null && document.getElementById("pieIngresa") != null) {
+        navEditado("barraIngresa", html + linkPrincipal, html + linkBarraMbs, linkConsulta);
+        pieEditado("pieIngresa", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, linkTrabaja);
+    }
+    if (document.getElementById("barraTrabaja") != null && document.getElementById("pieTrabaja") != null) {
+        navEditado("barraTrabaja", html + linkPrincipal, html + linkBarraMbs, html + linkConsulta);
+        pieEditado("pieTrabaja", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, retorno);
     }
 }
 
@@ -189,22 +254,22 @@ function opinion(){
 
 }
 
-function navEditado(barra, barra1){
+function navEditado(barra, link1, link2, link3){
     document.getElementById(barra).innerHTML = '<nav class="navbar navbar-expand-md colorMadera container-fluid bordeTarjeta">' +
-                '<b class="navbar-brand MBS">MBS</b>' +
+                '<b class="navbar-brand MBS fuenteTitulo">MBS</b>' +
                 '<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">' +
                         '<span class="navbar-toggler-icon"></span>' +
                 '</button>' +
-                '<div class="collapse navbar-collapse navbar-dark" id="collapsibleNavbar">' +
-                        '<ul class="navbar-nav">' +
+                '<div class="collapse navbar-collapse" id="collapsibleNavbar">' +
+                        '<ul class="navbar-nav fuenteParrafo">' +
                             '<li class="nav-item">' +
-                                    '<a class="nav-link" href="' + barra1 + 'principal.html">Principal</a>' +
+                                    '<a class="nav-link  text-white" href="' + link1 + '">Principal</a>' +
                             '</li>'+
                             '<li class="nav-item">' +
-                                    '<a class="nav-link" href=" ' + barra1 + 'mbs/sobreMBS.html">Sobre MBS</a>' +
+                                    '<a class="nav-link  text-white" href="' + link2 + '">Sobre MBS</a>' +
                             '</li>' +
-                            '<li class="nav-item">' +
-                                    '<a class="nav-link" href="#">Contacto</a>' +
+        '<li class="nav-item">' +
+        '<a class="nav-link  text-white" href="' + link3 + '">Contacto</a>' +
                             '</li>' +
                         '</ul>' +
                 '</div>' +
@@ -214,6 +279,47 @@ function navEditado(barra, barra1){
                     '</div>' +
                 '</div>' +
             '</nav>';
+}
+
+function pieEditado(pie, link1, link2, link3, link4, link5){
+    document.getElementById(pie).innerHTML = '<footer class="container-fluid colorMadera pie bordeTarjeta">' +
+                                                   ' <div class="row d-flex">' +
+                                                        
+                                                       '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +
+                                                            '<ul class="listasPie fuenteParrafo">' +
+                                                                '<b class="text-light fuenteTitulo">Servicios</b>' + 
+                                                                '<li>' +
+                                                                    '<div><a href="' + link1 + '">Envío a domicilio</a></div>' +
+                                                                '</li>' +
+                                                                '<li>' +
+                                                                    '<a href="' +  link2  + '">Venta telefónica</a>' +
+                                                                '</li>' +
+                                                            '</ul>' +
+                                                        '</div>' +
+                                                        '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +
+                                                            '<ul class="listasPie fuenteParrafo">' +
+                                                            '<b class="text-light fuenteTitulo">Ayuda</b>' +
+                                                            '<li>' +
+                                                                '<a href="' + link3 + '">Atención al cliente</a>' +
+                                                            '</li>' +   
+                                                            '<li>' +
+                                                                '<a href="' + link4 + '">Deja tu opinión</a>' +
+                                                            '</li>' +
+                                                            '<li>' +
+                                                                '<a href="' + link5 + '">Trabaja con nosotros</a>' +
+                                                            '</li>' +
+                                                        '</ul>' +
+                                                        '</div>' +
+                                                        
+                                                        '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3 icono-usuario d-flex justify-content-end">' +
+                                                            '<a href=""><i class="fab fa-facebook mr-2"></i></a>' +
+                                                            '<a href=""><i class="fab fa-instagram mr-2"></i></a>' +
+                                                            '<a href=""><i class="fab fa-youtube mr-2"></i></a>' +
+                                                            '<a href=""><i class="fab fa-twitter"></i></a>' +
+                                                        '</div>' +
+
+                                                    '</div>' +
+                                                '</footer>'
 }
 
 

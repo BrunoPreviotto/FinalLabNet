@@ -68,7 +68,73 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\principal.css" />
+    <Content Include="html\ayuda\atencion.html" />
+    <Content Include="html\ayuda\opinion.html" />
+    <Content Include="html\mbs\sobreMBS.html" />
+    <Content Include="html\mbs\trabaja.html" />
+    <Content Include="html\Principal\principal.html" />
+    <Content Include="html\Productos\Cocina\alacena.html" />
+    <Content Include="html\Productos\Cocina\bajoMesada.html" />
+    <Content Include="html\Productos\Cocina\cocina.html" />
+    <Content Include="html\Productos\Cocina\despensero.html" />
+    <Content Include="html\Productos\Dormitorio\camas.html" />
+    <Content Include="html\Productos\Dormitorio\dormitorio.html" />
+    <Content Include="html\Productos\Dormitorio\mesas.html" />
+    <Content Include="html\Productos\Dormitorio\placares.html" />
+    <Content Include="html\Productos\Oficina\bibliotecas.html" />
+    <Content Include="html\Productos\Oficina\escritorios.html" />
+    <Content Include="html\Productos\Oficina\oficina.html" />
+    <Content Include="html\Productos\Oficina\sillas.html" />
+    <Content Include="html\servicios\envio.html" />
+    <Content Include="html\servicios\venta.html" />
+    <Content Include="img\blackfriday2.png" />
+    <Content Include="img\blackfriday3.jpg" />
+    <Content Include="img\cocina.jpg" />
+    <Content Include="img\Cocina\Alacena\alacena2.jpg" />
+    <Content Include="img\Cocina\Alacena\alacena3.jpg" />
+    <Content Include="img\Cocina\Alacena\alacena4.jpg" />
+    <Content Include="img\Cocina\Bajo mesada\mesada1.jpg" />
+    <Content Include="img\Cocina\Bajo mesada\mesada2.jpg" />
+    <Content Include="img\Cocina\Bajo mesada\mesada3.jpg" />
+    <Content Include="img\Cocina\Bajo mesada\mesada4.jpg" />
+    <Content Include="img\Cocina\Despensero\despensero1.jpg" />
+    <Content Include="img\Cocina\Despensero\despensero2.jpg" />
+    <Content Include="img\Cocina\Despensero\despensero3.jpg" />
+    <Content Include="img\Cocina\Despensero\despensero4.jpg" />
+    <Content Include="img\dormitorio.jpg" />
+    <Content Include="img\Dormitorio\Camas\cama1.jpg" />
+    <Content Include="img\Dormitorio\Camas\cama2.jpg" />
+    <Content Include="img\Dormitorio\Camas\cama3.jpg" />
+    <Content Include="img\Dormitorio\Camas\cama4.jpg" />
+    <Content Include="img\Dormitorio\mesas de luz\mesa1.jpg" />
+    <Content Include="img\Dormitorio\mesas de luz\mesa2.jpg" />
+    <Content Include="img\Dormitorio\mesas de luz\mesa3.jpg" />
+    <Content Include="img\Dormitorio\mesas de luz\mesa4.jpg" />
+    <Content Include="img\Dormitorio\placard\placard1.jpg" />
+    <Content Include="img\Dormitorio\placard\placard2.jpg" />
+    <Content Include="img\Dormitorio\placard\placard3.jpg" />
+    <Content Include="img\Dormitorio\placard\placard4.jpg" />
+    <Content Include="img\fondo.jpg" />
+    <Content Include="img\fondo1.jpg" />
+    <Content Include="img\fondo2.jpg" />
+    <Content Include="img\fondo4.jpg" />
+    <Content Include="img\fondo5.jpeg" />
+    <Content Include="img\oficina.jpg" />
+    <Content Include="img\Oficina\Biblioteca\biblioteca1.jpg" />
+    <Content Include="img\Oficina\Biblioteca\biblioteca2.jpg" />
+    <Content Include="img\Oficina\Biblioteca\biblioteca3.jpg" />
+    <Content Include="img\Oficina\Biblioteca\biblioteca4.jpg" />
+    <Content Include="img\Oficina\Escritorio\escritorio1.jpg" />
+    <Content Include="img\Oficina\Escritorio\escritorio2.jpg" />
+    <Content Include="img\Oficina\Escritorio\escritorio3.jpg" />
+    <Content Include="img\Oficina\Escritorio\escritorio4.jpg" />
+    <Content Include="img\Oficina\Sillas\silla1.jpg" />
+    <Content Include="img\Oficina\Sillas\silla2.jpg" />
+    <Content Include="img\Oficina\Sillas\silla3.jpg" />
+    <Content Include="img\Oficina\Sillas\silla4.jpg" />
+    <Content Include="img\telefonica.jpg" />
     <Content Include="Ingresa.aspx" />
+    <Content Include="js\principal.js" />
     <Content Include="TrabajaConNosotros.aspx" />
     <Content Include="Web.config" />
     <Content Include="Consulta.aspx" />
@@ -98,6 +164,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Cocina\Alacena\alacena1.webp" />
+    <Content Include="img\descuento.webp" />
+    <Content Include="img\diversidad.avif" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

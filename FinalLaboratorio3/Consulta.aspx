@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="principal.css"/>
 
 
-        <title> MBS </title>
+        <title> Contancto </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -22,65 +22,87 @@
 		<script src="https://kit.fontawesome.com/702052ce2d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Barra de navegacion --> 
+		 <div id="barraConsulta">
+   		 </div>
        
     
-    <h1>
-        Contacto
-    </h1>
     
-	<div class="d-flex justify-content-center colorMadera bordeTarjeta MBS text-center">
+
+    <div class="container text-center mt-3">
+        <h1 class="bordeTarjeta colorMadera MBS">
+            Contacto
+        </h1>
+    </div>
+    
+	<div class="container d-flex justify-content-center colorMadera bordeTarjeta MBS text-center">
 
 		    <form id="form1" runat="server" >
             <br /><br />
             
-            <div>
+            <div class="bordeTarjeta p-2">
                 <asp:Label CssClass="MBS" ID="lnombre" runat="server" Text="Nombre"></asp:Label>
+                <br />
+                <asp:TextBox ID="tbnombre"  runat="server" Height="22px" Width="128px"></asp:TextBox>
             </div>
-            <asp:TextBox ID="tbnombre" runat="server" Height="22px" Width="128px"></asp:TextBox>
             
-            <br /><br />
-            <div>
+           <br />
+            <div class="bordeTarjeta p-2">
                 <asp:Label CssClass="MBS" ID="lemail" runat="server" Text="E-mail"></asp:Label>
+                <br />
+                <asp:TextBox ID="tbEmail" TextMode="Email" runat="server" Height="22px" Width="128px"></asp:TextBox>
             </div>
-            <asp:TextBox ID="tbEmail" TextMode="Email" runat="server" Height="22px" Width="128px"></asp:TextBox>
-        
-            <br /><br />
-            <div>
-                <asp:Label CssClass="MBS" ID="ltelefono" runat="server" Text="Telefono"></asp:Label>
-            </div>
-            <asp:DropDownList  ID="ddlNumero" runat="server">
-            </asp:DropDownList>
-            <asp:TextBox ID="tbtelefono" TextMode="Phone" runat="server" Height="22px" Width="128px"></asp:TextBox>
-        
-            <br /><br />
-            <div>
-                <asp:Label CssClass="MBS" ID="lasunto" runat="server" Text="Asunto"></asp:Label>
-            </div>
-            <asp:TextBox ID="tbasunto" runat="server" Height="22px" Width="128px"></asp:TextBox>
-        
-            <br /><br />
-            <asp:Label ID="lMayor" runat="server" Text="Sos mayor de edad?"></asp:Label> 
-            <asp:RadioButtonList ID="rbEdad" runat="server" CssClass="col" AutoPostBack="true" OnSelectedIndexChanged="rbEdad_SelectedIndexChanged" RepeatDirection="Horizontal">
-                <asp:ListItem Text="Si" Selected="True" Value="1"></asp:ListItem>
-                <asp:ListItem Text="No" Value="2"></asp:ListItem>
-            </asp:RadioButtonList>
-        
             
-            <asp:Label CssClass="MBS" ID="lEdad" runat="server" Text="Edad: "></asp:Label>
-            <asp:TextBox ID="tbEdad" runat="server"></asp:TextBox>
-        
-            <br /><br />
-            <div>
-                <asp:Label CssClass="MBS" ID="lconsulta" runat="server" Text="Consulta"></asp:Label>
+            <br />
+            <div class="bordeTarjeta p-2">
+                 <asp:Label CssClass="MBS" ID="ltelefono" runat="server" Text="Telefono"></asp:Label>
+                 <br />
+                 <asp:DropDownList  ID="ddlNumero" runat="server">
+                 </asp:DropDownList>
+                 <asp:TextBox ID="tbtelefono" TextMode="Phone" runat="server" Height="22px" Width="128px"></asp:TextBox>
             </div>
-            <asp:TextBox ID="tbconsulta" TextMode="MultiLine" runat="server" Height="97px" Width="198px"></asp:TextBox>
+           
+            <br />
+            <div class="bordeTarjeta p-2">
+                <asp:Label CssClass="MBS" ID="lasunto" runat="server" Text="Asunto"></asp:Label>
+                <br />
+                <asp:TextBox ID="tbasunto" runat="server" Height="22px" Width="128px"></asp:TextBox>
+            </div>
+           
+            <br />
+           <div class="bordeTarjeta p-2">
 
-            <br /><br />
+                <asp:Label ID="lMayor" runat="server" Text="Sos mayor de edad?"></asp:Label> 
+                <asp:RadioButtonList ID="rbEdad" runat="server" CssClass="col" AutoPostBack="true" OnSelectedIndexChanged="rbEdad_SelectedIndexChanged" RepeatDirection="Horizontal">
+                    <asp:ListItem Text="Si" Selected="True" Value="1"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="2"></asp:ListItem>
+                </asp:RadioButtonList>
+        
+                <asp:Label CssClass="MBS" ID="lEdad" runat="server" Text="Edad"></asp:Label>
+                <br />
+                <asp:TextBox ID="tbEdad" runat="server"></asp:TextBox>
+
+           </div>
+        
+            <br />
+            <div class="bordeTarjeta p-2">
+                <asp:Label CssClass="MBS" ID="lconsulta" runat="server" Text="Consulta"></asp:Label>
+                <br />
+                <asp:TextBox ID="tbconsulta" TextMode="MultiLine" runat="server" Height="97px" Width="198px"></asp:TextBox>
+            </div>
+            
+            <br />
             <asp:Button CssClass="MBS bordeTarjeta colorMadera" ID="btconsulta" runat="server" Text="Enviar Consulta" OnClick="btconsulta_Click" />
             <p>&nbsp;</p>
         </form>
 
-	</>
+	
+    </div>
+
+        <!--PIE-->
+    	<div id="pieConsulta">
+    	</div>
     
 </body>
 </html>
