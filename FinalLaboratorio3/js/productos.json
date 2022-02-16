@@ -1,0 +1,124 @@
+{
+    "Productos": [
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Alacena",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Alacena/alacena1.webp",
+            "Descripcion": "Alacena 1.60 Mts. Color blanco",
+            "Cuotas": "Hasta 12 cuotas sin interes",
+            "llegada": "llega mañana"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Despensero",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Despensero/despensero1.jpg",
+            "Descripcion": "Alacena 1.60 Mts. Color marron",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Bajo-mesada",
+            "Marca": "Mosconi",
+            "Precio": 6000,
+            "Imagen": "../../../img/Cocina/Bajo mesada/mesada2.jpg",
+            "Descripcion": "Alacena 40 Cts. Color blanco",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Alacena",
+            "Marca": "Mosconi",
+            "Precio": 9000,
+            "Imagen": "../../../img/Cocina/Alacena/alacena3.jpg",
+            "Descripcion": "Alacena 1.20 Mts. Color blanco",
+            "Cuotas": "hasta 6 cuotas sin interes",
+            "llegada": "llega mañana"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Bajo-mesada",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Bajo mesada/mesada1.jpg",
+            "Descripcion": "Alacena 1.60 Mts. Color blanco",
+            "Cuotas": "Hasta 12 cuotas sin interes",
+            "llegada": "llega mañana"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Despensero",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Despensero/despensero4.jpg",
+            "Descripcion": "Alacena 1.60 Mts. Color marron",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Bajo-mesada",
+            "Marca": "Mosconi",
+            "Precio": 6000,
+            "Imagen": "../../../img/Cocina/Bajo mesada/mesada3.jpg",
+            "Descripcion": "Alacena 40 Cts. Color blanco",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Alacena",
+            "Marca": "Mosconi",
+            "Precio": 9000,
+            "Imagen": "../../../img/Cocina/Alacena/alacena4.jpg",
+            "Descripcion": "Alacena 1.20 Mts. Color blanco",
+            "Cuotas": "hasta 6 cuotas sin interes",
+            "llegada": "llega mañana"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Despensero",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Despensero/despensero3.jpg",
+            "Descripcion": "Alacena 1.60 Mts. Color blanco",
+            "Cuotas": "Hasta 12 cuotas sin interes",
+            "llegada": "llega mañana"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Despensero",
+            "Marca": "Mosconi",
+            "Precio": 12000,
+            "Imagen": "../../../img/Cocina/Despensero/despensero2.jpg",
+            "Descripcion": "Alacena 1.60 Mts. Color marron",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Alacena",
+            "Marca": "Mosconi",
+            "Precio": 6000,
+            "Imagen": "../../../img/Cocina/Alacena/alacena2.jpg",
+            "Descripcion": "Alacena 40 Cts. Color blanco",
+            "Cuotas": "hasta 12 cuotas sin interes",
+            "llegada": "llega el lunes"
+        },
+        {
+            "Categoria": "Cocina",
+            "Nombre": "Bajo-mesada",
+            "Marca": "Mosconi",
+            "Precio": 9000,
+            "Imagen": "../../../img/Cocina/Bajo mesada/mesada4.jpg",
+            "Descripcion": "Alacena 1.20 Mts. Color blanco",
+            "Cuotas": "hasta 6 cuotas sin interes",
+            "llegada": "llega mañana"
+        }
+    ]
+}

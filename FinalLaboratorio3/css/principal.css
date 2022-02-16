@@ -11,7 +11,7 @@ body{
    
 	background-image: url("../img/fondo4.jpg");
     background-size: 2000px 3000px;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	display: block;
 
 }
@@ -59,10 +59,10 @@ body{
 
 
 
-.pie{
-    
-	margin-bottom: 0px;
-
+.pie {
+	position: relative;
+	margin-top: -50px;
+	clear: both;
 }
 
 
@@ -130,10 +130,7 @@ a:link {
 	  text-shadow: 0px 0px 20px black;
    }
 
-   .medioEnvio{
-	   height: 75px;
-	   font-size: 50px;
-   }
+   
 
    .formOpinion{
    	width: 600px;
@@ -163,9 +160,6 @@ a:link {
 	border-top: 2px solid rgb(245,222,179, 0.8);
    }
 
-   .parrafos{
-	   width: 800px;
-	}
 
 	.divImgCocina{
 		background-color: rgb(63,19,3, 0.6);
@@ -213,11 +207,29 @@ a:link {
 	.titulosSobre{
 		font-size: 25px;
 	}
-
+	
 	
 
 
 	
+
+    @media (max-width: 500px){
+    	.vw4{
+    		font-size: 12px;
+    	}
+
+    	.vw3 {
+        	font-size: 9px;
+        }
+
+    	.vw2{
+    		font-size: 6px;	
+    	}
+
+    	.vw1{
+    		font-size: 9px;
+    	}
+}
 
 	
 

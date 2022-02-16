@@ -34,28 +34,42 @@ $(document).ready(function(){
         $(".envioPequeñoTexto").fadeToggle();
     });
 
+
     
-    
-    for(x of Productos){
-         
-
-
-        if(x.Nombre == "Bajo-mesada" && document.getElementById("productosBajo-mesada")  != null){
-            carga(x, document.getElementById("productosBajo-mesada"));
-               
-        }
-        if(x.Nombre == "Alacena" && document.getElementById("productosAlacena")  != null){
-            carga(x, document.getElementById("productosAlacena"));
-        }
-        if(x.Nombre == "Despensero" && document.getElementById("productosDespensero")  != null){
-            carga(x, document.getElementById("productosDespensero"));
-        }
-        if(x.Categoria == "Cocina" && document.getElementById("productosCocina")  != null){
-            carga(x, document.getElementById("productosCocina"));
-        }
-
         
-    }
+
+    $.getJSON("../../../js/productos.json", function (data, textStatus) {
+
+        if (textStatus == "success")
+            for (x of data.Productos) {
+
+
+
+                if (x.Nombre == "Bajo-mesada" && document.getElementById("productosBajo-mesada") != null) {
+                    carga(x, document.getElementById("productosBajo-mesada"));
+
+                }
+                if (x.Nombre == "Alacena" && document.getElementById("productosAlacena") != null) {
+                    carga(x, document.getElementById("productosAlacena"));
+                }
+                if (x.Nombre == "Despensero" && document.getElementById("productosDespensero") != null) {
+                    carga(x, document.getElementById("productosDespensero"));
+                }
+                if (x.Categoria == "Cocina" && document.getElementById("productosCocina") != null) {
+                    carga(x, document.getElementById("productosCocina"));
+                }
+
+
+            }
+
+    });
+   
+    
+    
+    
+
+
+   
 
     function carga(x, prod){
             b = document.createElement("b");
@@ -144,87 +158,87 @@ function insertarNav(){
     var retorno = "";
     
     if(document.getElementById("barraCamas") != null && document.getElementById("pieCamas") != null){
-        navEditado("barraCamas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-        pieEditado("pieCamas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+        navEditado("barraCamas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa);
+        pieEditado("pieCamas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraAtencion") != null && document.getElementById("pieAtencion") != null){
-         navEditado("barraAtencion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieAtencion", unaBarra + linkEnvio, unaBarra + linkVenta, retorno, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+         navEditado("barraAtencion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("pieAtencion", unaBarra + linkEnvio, unaBarra + linkVenta, retorno, unaBarra + linkOpinion, unaBarra +  unaBarra + linkTrabaja);
     }
     if(document.getElementById("barraOpinion") != null && document.getElementById("pieOpinion") != null){
-         navEditado("barraOpinion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieOpinion", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, retorno, unaBarra + linkTrabaja);
+         navEditado("barraOpinion", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("pieOpinion", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, retorno, unaBarra +  unaBarra + linkTrabaja);
     }
     if (document.getElementById("barraMBS") != null && document.getElementById("pieSobre") != null) {
-        navEditado("barraMBS", unaBarra + linkPrincipal, retorno, dosBarras + linkConsulta);
-         pieEditado("pieSobre", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+        navEditado("barraMBS", unaBarra + linkPrincipal, retorno, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("pieSobre", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra +  unaBarra + linkTrabaja);
     }
     if(document.getElementById("barraAlacena") != null && document.getElementById("pieAlacena") != null){
-         navEditado("barraAlacena", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieAlacena", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraAlacena", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieAlacena", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraMesada") != null && document.getElementById("pieMesada") != null){
-         navEditado("barraMesada", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieMesada", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraMesada", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieMesada", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraCocina") != null && document.getElementById("pieCocina") != null){
-         navEditado("barraCocina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieCocina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraCocina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieCocina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraDespensero") != null && document.getElementById("pieDespensero") != null){
-         navEditado("barraDespensero", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieDespensero", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraDespensero", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieDespensero", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraDormitorio") != null && document.getElementById("pieDormitorio") != null){
-         navEditado("barraDormitorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieDormitorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraDormitorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieDormitorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraMesas") != null && document.getElementById("pieMesas") != null){
-         navEditado("barraMesas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieMesas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraMesas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieMesas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraPlacares") != null && document.getElementById("piePlacares") != null){
-         navEditado("barraPlacares", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("piePlacares", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraPlacares", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("piePlacares", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraBibliotecas") != null && document.getElementById("pieBibliotecas") != null){
-         navEditado("barraBibliotecas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieBibliotecas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraBibliotecas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieBibliotecas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraEscritorio") != null && document.getElementById("pieEscritorio") != null){
-         navEditado("barraEscritorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieEscritorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraEscritorio", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieEscritorio", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraOficina") != null && document.getElementById("pieOficina") != null){
-         navEditado("barraOficina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieOficina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraOficina", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieOficina", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraSillas") != null && document.getElementById("pieSillas") != null){
-         navEditado("barraSillas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieSillas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion, dosBarras + linkTrabaja);
+         navEditado("barraSillas", dosBarras + linkPrincipal, dosBarras + linkBarraMbs, dosBarras + linkConsulta, unaBarra + dosBarras + linkIngresa );
+         pieEditado("pieSillas", dosBarras + linkEnvio, dosBarras + linkVenta, dosBarras + linkAtencion, dosBarras + linkOpinion,  unaBarra + dosBarras + linkTrabaja);
     }
     if(document.getElementById("barraEnvio") != null && document.getElementById("pieEnvio") != null){
-         navEditado("barraEnvio", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieEnvio", retorno, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+         navEditado("barraEnvio", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("pieEnvio", retorno, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra +  unaBarra + linkTrabaja);
     }
     if(document.getElementById("barraVenta") != null && document.getElementById("pieVenta") != null){
-         navEditado("barraVenta", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("pieVenta", unaBarra + linkEnvio, retorno, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+         navEditado("barraVenta", unaBarra + linkPrincipal, unaBarra + linkBarraMbs, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("pieVenta", unaBarra + linkEnvio, retorno, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra +  unaBarra + linkTrabaja);
     }
     if(document.getElementById("barraPrincipal") != null && document.getElementById("piePrincipal") != null){
-         navEditado("barraPrincipal", retorno, unaBarra + linkBarraMbs, dosBarras + linkConsulta);
-         pieEditado("piePrincipal", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra + linkTrabaja);
+         navEditado("barraPrincipal", retorno, unaBarra + linkBarraMbs, dosBarras + linkConsulta, dosBarras + linkIngresa );
+         pieEditado("piePrincipal", unaBarra + linkEnvio, unaBarra + linkVenta, unaBarra + linkAtencion, unaBarra + linkOpinion, unaBarra +  unaBarra + linkTrabaja);
     }
     if (document.getElementById("barraConsulta") != null && document.getElementById("pieConsulta") != null) {
-        navEditado("barraConsulta", html + linkPrincipal, html + linkBarraMbs, retorno);
+        navEditado("barraConsulta", html + linkPrincipal, html + linkBarraMbs, retorno, linkIngresa);
         pieEditado("pieConsulta", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, html + linkTrabaja);
     }
     if (document.getElementById("barraIngresa") != null && document.getElementById("pieIngresa") != null) {
-        navEditado("barraIngresa", html + linkPrincipal, html + linkBarraMbs, linkConsulta);
+        navEditado("barraIngresa", html + linkPrincipal, html + linkBarraMbs, linkConsulta, retorno);
         pieEditado("pieIngresa", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, linkTrabaja);
     }
     if (document.getElementById("barraTrabaja") != null && document.getElementById("pieTrabaja") != null) {
-        navEditado("barraTrabaja", html + linkPrincipal, html + linkBarraMbs, html + linkConsulta);
+        navEditado("barraTrabaja", html + linkPrincipal, html + linkBarraMbs, html + linkConsulta, linkIngresa );
         pieEditado("pieTrabaja", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, retorno);
     }
 }
@@ -254,64 +268,64 @@ function opinion(){
 
 }
 
-function navEditado(barra, link1, link2, link3){
+function navEditado(barra, link1, link2, link3, link4){
     document.getElementById(barra).innerHTML = '<nav class="navbar navbar-expand-md colorMadera container-fluid bordeTarjeta">' +
-                '<b class="navbar-brand MBS fuenteTitulo">MBS</b>' +
+                '<b class="navbar-brand MBS fuenteTitulo vw4">MBS</b>' +
                 '<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">' +
                         '<span class="navbar-toggler-icon"></span>' +
                 '</button>' +
                 '<div class="collapse navbar-collapse" id="collapsibleNavbar">' +
                         '<ul class="navbar-nav fuenteParrafo">' +
                             '<li class="nav-item">' +
-                                    '<a class="nav-link  text-white" href="' + link1 + '">Principal</a>' +
+                                    '<a class="nav-link text-white vw3" href="' + link1 + '">Principal</a>' +
                             '</li>'+
                             '<li class="nav-item">' +
-                                    '<a class="nav-link  text-white" href="' + link2 + '">Sobre MBS</a>' +
+                                    '<a class="nav-link  text-white vw3" href="' + link2 + '">Sobre MBS</a>' +
                             '</li>' +
         '<li class="nav-item">' +
-        '<a class="nav-link  text-white" href="' + link3 + '">Contacto</a>' +
+        '<a class="nav-link  text-white vw3" href="' + link3 + '">Contacto</a>' +
                             '</li>' +
                         '</ul>' +
                 '</div>' +
                 '<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">' +
                     '<div class="nav-item  icono-usuario">' +
-                        '<a href="" ><i class="fas fa-user MBS"></i></a>' +
+                        '<a href="' + link4 + '" ><i class="fas fa-user MBS vw4"></i></a>' +
                     '</div>' +
                 '</div>' +
             '</nav>';
 }
 
 function pieEditado(pie, link1, link2, link3, link4, link5){
-    document.getElementById(pie).innerHTML = '<footer class="container-fluid colorMadera pie bordeTarjeta">' +
+    document.getElementById(pie).innerHTML = '<footer class="colorMadera pie bordeTarjeta">' +
                                                    ' <div class="row d-flex">' +
                                                         
                                                        '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +
                                                             '<ul class="listasPie fuenteParrafo">' +
-                                                                '<b class="text-light fuenteTitulo">Servicios</b>' + 
+                                                                '<b class="text-light fuenteTitulo vw3">Servicios</b>' + 
                                                                 '<li>' +
-                                                                    '<div><a href="' + link1 + '">Envío a domicilio</a></div>' +
+                                                                    '<div class="vw3"><a href="' + link1 + '">Envío a domicilio</a></div>' +
                                                                 '</li>' +
                                                                 '<li>' +
-                                                                    '<a href="' +  link2  + '">Venta telefónica</a>' +
+                                                                    '<div class="vw3"><a href="' +  link2  + '">Venta telefónica</a></div>' +
                                                                 '</li>' +
                                                             '</ul>' +
                                                         '</div>' +
                                                         '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +
                                                             '<ul class="listasPie fuenteParrafo">' +
-                                                            '<b class="text-light fuenteTitulo">Ayuda</b>' +
+                                                            '<b class="text-light fuenteTitulo vw3">Ayuda</b>' +
                                                             '<li>' +
-                                                                '<a href="' + link3 + '">Atención al cliente</a>' +
+                                                                '<div class="vw3"><a href="' +  link3  + '">Venta telefónica</a></div>' +
                                                             '</li>' +   
                                                             '<li>' +
-                                                                '<a href="' + link4 + '">Deja tu opinión</a>' +
+                                                                '<div class="vw3"><a href="' +  link4  + '">Deja tu opinion</a></div>' +
                                                             '</li>' +
                                                             '<li>' +
-                                                                '<a href="' + link5 + '">Trabaja con nosotros</a>' +
+                                                                '<div class="vw3"><a href="' +  link5  + '">Trabaja con nosotros</a></div>' +
                                                             '</li>' +
                                                         '</ul>' +
                                                         '</div>' +
                                                         
-                                                        '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3 icono-usuario d-flex justify-content-end">' +
+                                                        '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3 icono-usuario d-flex justify-content-end vw3">' +
                                                             '<a href=""><i class="fab fa-facebook mr-2"></i></a>' +
                                                             '<a href=""><i class="fab fa-instagram mr-2"></i></a>' +
                                                             '<a href=""><i class="fab fa-youtube mr-2"></i></a>' +

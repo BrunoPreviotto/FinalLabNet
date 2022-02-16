@@ -19,6 +19,22 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="../js/principal.js"></script>
 		<script src="https://kit.fontawesome.com/702052ce2d.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet"/>
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet"/>
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"/>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 </head>
 <body>
 
@@ -26,15 +42,15 @@
 		 <div id="barraIngresa">
    		 </div>
     
-    <div class="container">
+    <div class="container mt-5">
         <h1 class="bordeTarjeta colorMadera MBS  text-center fuenteTitulo">
             Bienvenido! Ingresa tu usuario y contraseña.
         </h1>
     </div>
 
-    <div class="container d-flex justify-content-center align-items-center text-center">
+    <div class="container d-flex justify-content-center align-items-center text-center mt-5">
 
-        <form id="form1" runat="server" >
+        <form class="mb-5 mt-5" id="form1" runat="server" >
             <div class="bordeTarjeta colorMadera MBS pb-5 pl-5 pr-5">
                 <asp:Label ID="lIncorrecto" runat="server" Text="" ></asp:Label>
                 <br/>
@@ -56,7 +72,7 @@
     </div>
 
     <!--PIE-->
-    	<div id="pieIngresa">
+    	<div id="pieIngresa" class="mt-5">
     	</div>
 </body>
 </html>

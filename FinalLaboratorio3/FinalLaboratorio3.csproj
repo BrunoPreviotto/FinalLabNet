@@ -167,6 +167,7 @@
     <Content Include="img\Cocina\Alacena\alacena1.webp" />
     <Content Include="img\descuento.webp" />
     <Content Include="img\diversidad.avif" />
+    <Content Include="js\productos.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
