@@ -1,10 +1,23 @@
 
-html, body{
-    
-	min-height: 100%;
-
+a:link {
+	color: rgb(245,222,179, 0.8);
 }
 
+
+a:visited {
+	color: rgb(245,222,179, 0.8);
+}
+
+
+a:hover {
+	color: rgb(245,222,179, 0.8);
+	text-decoration: none;
+}
+
+
+a:active {
+	color: rgb(245,222,179, 0.8);
+}
 
 
 body{
@@ -13,9 +26,24 @@ body{
     background-size: 2000px 3000px;
 	background-repeat: repeat;
 	display: block;
-
+	min-height: 100%;
 }
 
+.bordeTarjeta{
+	border: 2px solid rgb(245,222,179, 0.8);
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px black;
+	text-shadow: 0px 0px 20px black;
+}
+
+.bordeTop{
+	border-top: 2px solid rgb(245,222,179, 0.8);
+}
+
+.carousel-div{
+  	background-color: rgb(63,19,3, 0.6);
+	border-radius: 30px;
+}
 
 .colorMadera{
     
@@ -27,7 +55,32 @@ body{
 	color: rgb(63,19,3, 0.6);
 }
 
+.divImgCocina{
+	background-color: rgb(63,19,3, 0.6);
+}
 
+.formOpinion{
+	width: 600px;
+	height: 500px;
+	font-size: 20px;
+}
+
+.fuenteParrafo{
+	font-family: 'Luxurious Roman', cursive;
+	font-size: 13px;
+}
+
+.fuenteTitulo{
+	font-family: 'Graduate', cursive;
+}
+
+.fuenteTitulo2{
+	font-family: 'Fredoka One', cursive;
+}
+
+.icono-usuario{
+  	font-size: 20px;
+}
 
 .imagenCentro{
     
@@ -42,37 +95,21 @@ body{
 	opacity: 0.6;
 }
 
-
-
-
-.MBS{
-    color: rgb(245,222,179, 0.8);
+.imgProd{
+	width: 250px;
 }
 
-
+.lado-imagen-centro{
+	border: 8px solid rgb(245,222,179, 0.8);  
+	border-radius: 30px;
+	background-color: rgb(245,222,179, 0.8);
+}
 
 .listaLado{
 	
 	list-style-type: none;
 
 }
-
-
-
-.pie {
-	position: relative;
-	margin-top: -50px;
-	clear: both;
-}
-
-
-
-.productos{
-    
-	width: 150px;
-	
-}
-
 
 .listasPie li{
     
@@ -81,154 +118,92 @@ body{
 	margin-top: 10px;
 }
 
+.MBS{
+    color: rgb(245,222,179, 0.8);
+}
+
+.parrafoCuotas{
+	color: rgb(245,222,179, 0.8);
+	text-align: center;
+}
+
+.parrafoDescripcion{
+	color: rgb(245,222,179, 0.8);
+	text-align: center;
+}
+
+.parrafoLLegada{
+	color: rgb(245,222,179, 0.8);
+	border: 1px solid rgb(245,222,179, 0.8);
+	background-color: rgb(63,19,3, 0.6);
+	text-align: center;
+	border-radius: 10px;
+}
+
+.parrafoPrecio{
+	color: rgb(245,222,179, 0.8);
+	font-size: 30px;
+}
+
+#parrafoOpinion p{
+	background-color: rgb(245,222,179, 0.8);
+	color: rgb(63,19,3, 0.6);
+	width: 400px;
+	border: 2px solid rgb(63,19,3, 0.6);
+	border-radius: 30px;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+#parrafoOpinion b{
+	background-color: rgb(63,19,3, 0.6);
+	color: rgb(245,222,179, 0.8);
+	border: 2px solid rgb(245,222,179, 0.8);
+	border-radius: 30px;
+	padding: 5px;
+}
+
+.pie {
+	bottom: 0;
+}
+
+.productos{
+    width: 150px;
+}
+
 #tituloCentro{
 	font-size: 30px;
 }
 
-
-
-a:link {
-	color: rgb(245,222,179, 0.8);
-  }
-  
-  
-  a:visited {
-	color: rgb(245,222,179, 0.8);
-  }
-  
- 
-  a:hover {
-	color: rgb(245,222,179, 0.8);
-	text-decoration: none;
-  }
-  
- 
-  a:active {
-	color: rgb(245,222,179, 0.8);
-  }
-
-  .lado-imagen-centro{
-	border: 8px solid rgb(245,222,179, 0.8);  
-	border-radius: 30px;
-	background-color: rgb(245,222,179, 0.8);
+.titulosSobre{
+	font-size: 25px;
 }
 
-  
-  .carousel-div{
-	  	background-color: rgb(63,19,3, 0.6);
-		border-radius: 30px;
-   }
 
-  .icono-usuario{
-	  font-size: 20px;
-   }
-
-  .bordeTarjeta{
-	  border: 2px solid rgb(245,222,179, 0.8);
-	  border-radius: 10px;
-	  box-shadow: 0px 0px 5px black;
-	  text-shadow: 0px 0px 20px black;
-   }
-
-   
-
-   .formOpinion{
-   	width: 600px;
-   	height: 500px;
-   	font-size: 20px;
-   }
-
-   #parrafoOpinion p{
-   		background-color: rgb(245,222,179, 0.8);
-   		color: rgb(63,19,3, 0.6);
-   		width: 400px;
-   		border: 2px solid rgb(63,19,3, 0.6);
-   		border-radius: 30px;
-   		padding: 5px;
-   		margin-top: 10px;
-   }
-
-   #parrafoOpinion b{
-   		background-color: rgb(63,19,3, 0.6);
-   		color: rgb(245,222,179, 0.8);
-   		border: 2px solid rgb(245,222,179, 0.8);
-   		border-radius: 30px;
-   		padding: 5px;
-   }
-
-   .bordeTop{
-	border-top: 2px solid rgb(245,222,179, 0.8);
-   }
-
-
-	.divImgCocina{
-		background-color: rgb(63,19,3, 0.6);
-	}
-	
-	.parrafoPrecio{
-		color: rgb(245,222,179, 0.8);
-		font-size: 30px;
+@media (max-width: 500px){
+	.vw4{
+		font-size: 12px;
 	}
 
-	.parrafoLLegada{
-		color: rgb(245,222,179, 0.8);
-		border: 1px solid rgb(245,222,179, 0.8);
-		background-color: rgb(63,19,3, 0.6);
-		text-align: center;
-		border-radius: 10px;
-	}
-	.parrafoDescripcion{
-		color: rgb(245,222,179, 0.8);
-		text-align: center;
+	.vw3 {
+    	font-size: 9px;
+    }
+
+	.vw2{
+		font-size: 6px;	
 	}
 
-	.parrafoCuotas{
-		color: rgb(245,222,179, 0.8);
-		text-align: center;
+	.vw1{
+		font-size: 9px;
 	}
 
-	.imgProd{
-		width: 250px;
+	.flechaDesplegar{
+		width: 5px;
 	}
 
-	.fuenteTitulo{
-		font-family: 'Graduate', cursive;
+	.label{
+		width : 20px;
 	}
-
-	.fuenteParrafo{
-		font-family: 'Luxurious Roman', cursive;
-		font-size: 13px;
-	}
-
-	.fuenteTitulo2{
-		font-family: 'Fredoka One', cursive;
-	}
-
-	.titulosSobre{
-		font-size: 25px;
-	}
-	
-	
-
-
-	
-
-    @media (max-width: 500px){
-    	.vw4{
-    		font-size: 12px;
-    	}
-
-    	.vw3 {
-        	font-size: 9px;
-        }
-
-    	.vw2{
-    		font-size: 6px;	
-    	}
-
-    	.vw1{
-    		font-size: 9px;
-    	}
 }
 
 	

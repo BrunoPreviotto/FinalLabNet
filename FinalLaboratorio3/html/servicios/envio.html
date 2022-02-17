@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="../../css/principal.css">
 		<script src="jquery-3.5.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="../../js/principal.js"></script>
+		<script src="../../js/mbs.js"></script>
 		<script src="https://kit.fontawesome.com/60785176fe.js" crossorigin="anonymous"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,91 +37,117 @@
     <div id="barraEnvio">
     </div>
 
-    <!-- TITULO -->
-    <div class="container w-50 mt-5">
+    
+    <div class="container">
 
-            <div class="text-center   bordeTarjeta MBS colorMadera">
-                    <div>
-                        <h1 class="vw3 fuenteTitulo">
-                            Envío a domicilio
-                        </h1>
-                    </div>
+        <!-- TITULO -->
+        <div class="row justify-content-center mt-5">
 
-                    <div>
-                        <p class="vw2 fuenteParrafo">
-                            ¿Cómo es tu pedido? Sea como sea, te lo llevamos donde tú quieras.
-                        </p>
-                    </div>
-            </div>
-    </div>    
+            <div class="text-center col-sm-6  bordeTarjeta MBS colorMadera">
+                <div>
+                    <h1 class="vw3 fuenteTitulo">
+                        Envío a domicilio
+                    </h1>
+                </div>
 
-    <!-- ENVIO GRANDE -->
-    <div class="container w-50 mt-5">
-            
-            <div class="bordeTarjeta MBS colorMadera d-flex justify-content-center text-center aling-item-center">
-                <div class="">
-                    <strong class="envioGrande vw3 fuenteTitulo">Envíos grandes</strong>
+                <div>
+                    <p class="vw2 fuenteParrafo">
+                        ¿Cómo es tu pedido? Sea como sea, te lo llevamos donde tú quieras.
+                    </p>
                 </div>
             </div>
-
-    </div>
-
-     <!-- ENVIO GRANDE TEXTO -->
-     <div class="container MBS bordeTarjeta colorMadera envioGrandeTexto w-50">
-            
-                <div class="row d-flex justify-content-center text-center aling-item-center">
-                        <div class="col-sm ">
-
-                                <div>
-                                    <strong class="border-bottom vw2 fuenteTitulo">decripción</strong>
-                                    <br>
-                                    <br>
-                                    <p class="vw1 fuenteParrafo">
-                                        Pedidos realizados online, por teléfono o en tienda (Peso'&lt 155 Kg)
-                                        Recibe tus pedidos hasta 155Kg en CP seleccionados**
-                                        Tu pedido se entregará en la estancia de tu casa que desees.
-                                    </p>
-                                </div>
-                        
-                        </div>
-
-                        <div class="col-sm">
-                            
-                                <div>
-                                    <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
-                                    <br>
-                                    <br>
-                                    <b class="vw1 fuenteParrafo">
-                                        $ 1000
-                                    </b>
-                                </div>
-                           
-                        </div>
-                </div>
         </div>
 
+        <!-- ENVIO GRANDE -->
+        <div class="row justify-content-center  mt-5">
 
-    
+            <div class="bordeTarjeta MBS col-lg-6 col-xl-6 col-md-4 col-sm-4 colorMadera envioGrande ">
+                <div class="d-flex">
+
+                    <div class="w-50">
+                        <strong class="vw4 fuenteTitulo">Envíos grandes</strong>
+                    </div>
+                    <div class="w-50 d-flex justify-content-end">
+                        <i id="flechasProdGrande" class="material-icons flechaProducto MBS">
+                            expand_less
+                        </i>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ENVIO GRANDE TEXTO -->
+
+        <div class="container envioGrandeTexto">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 d-flex  MBS bordeTarjeta colorMadera justify-content-center text-center aling-item-center">
+
+                    <div class="w-50">
+                        <div>
+                            <strong class="border-bottom vw2 fuenteTitulo">decripción</strong>
+                            <br>
+                            <br>
+                            <p class="vw1 fuenteParrafo">
+                                Pedidos realizados online, por teléfono o en tienda (Peso'&lt 155 Kg)
+                                Recibe tus pedidos hasta 155Kg en CP seleccionados**
+                                Tu pedido se entregará en la estancia de tu casa que desees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-50">
+
+                        <div>
+                            <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
+                            <br>
+                            <br>
+                            <b class="vw1 fuenteParrafo">
+                                $ 1000
+                            </b>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+       
+
+
+
         <!-- ENVIO MEDIANO -->
 
-        <div class="container w-50 mt-5">
-            <div class="bordeTarjeta MBS colorMadera d-flex justify-content-center text-center aling-item-center">
-                    <div class="">
-                        <strong class="vw3 envioMediano fuenteTitulo">
-                            Envíos medianos
-                        </strong>
+
+
+        <div class="row justify-content-center  mt-5">
+
+            <div class="bordeTarjeta MBS col-lg-6 col-xl-6 col-md-4 col-sm-4 colorMadera envioMediano ">
+                <div class="d-flex">
+
+                    <div class="w-50">
+                        <strong class="vw4 fuenteTitulo">Envíos medianos</strong>
                     </div>
+                    <div class="w-50 d-flex justify-content-end">
+                        <i id="flechasProdMediano" class="material-icons flechaProducto MBS">
+                            expand_less
+                        </i>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
         <!-- ENVIO MEDIANO TEXTO -->
 
-        <div class="container MBS bordeTarjeta colorMadera w-50 envioMedianoTexto">
-                <div class="row d-flex justify-content-center text-center aling-item-center">
-                    
-                    <div class="col-sm">
-                        </p>
+        <div class="container envioMedianoTexto">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 d-flex  MBS bordeTarjeta colorMadera justify-content-center text-center aling-item-center">
 
+                    <div class="w-50">
                         <div>
                             <strong class="border-bottom vw2 fuenteTitulo">decripción</strong>
                             <br>
@@ -136,47 +162,58 @@
                         </div>
                     </div>
 
-                    <div class="col-sm">
-                            
-                                <div>
-                                    <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
-                                    <br>
-                                    <br>
-                                    <b class="vw1 fuenteParrafo">
-                                        $ 600
-                                    </b>
-                                </div>
-                           
+                    <div class="w-50">
+
+                        <div>
+                            <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
+                            <br>
+                            <br>
+                            <b class="vw1 fuenteParrafo">
+                                $ 600
+                            </b>
+                        </div>
+
                     </div>
-                    
+
                 </div>
+            </div>
         </div>
+
+
 
 
 
         <!-- ENVIO PEQUEÑO -->
 
 
-        <div class="container w-50 mt-5">
-            <div class="bordeTarjeta MBS colorMadera d-flex justify-content-center text-center aling-item-center">
-                    <div class="">
-                        <strong class="vw3 envioPequeño fuenteTitulo">
-                            Envíos pequeños
-                        </strong>
+        <div class="row justify-content-center  mt-5">
+
+            <div class="bordeTarjeta MBS col-lg-6 col-xl-6 col-md-4 col-sm-4 colorMadera envioPequeño ">
+                <div class="d-flex">
+
+                    <div class="w-50">
+                        <strong class="vw4 fuenteTitulo">Envíos pequeños</strong>
                     </div>
+                    <div class="w-50 d-flex justify-content-end">
+                        <i id="flechasProdPequeño" class="material-icons flechaProducto MBS">
+                            expand_less
+                        </i>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
-       
+
 
         <!-- ENVIO PEQUEÑO TEXTO -->
 
-         <div class="container MBS bordeTarjeta colorMadera w-50 envioPequeñoTexto">
-                <div class="row d-flex justify-content-center text-center aling-item-center">
-                    
-                    <div class="col-sm">
-                        </p>
+        <div class="container envioPequeñoTexto">
+            <div class="row justify-content-center">
+                <div class="col-sm-8 d-flex  MBS bordeTarjeta colorMadera justify-content-center text-center aling-item-center">
 
+                    <div class="w-50">
                         <div>
                             <strong class="border-bottom vw2 fuenteTitulo">decripción</strong>
                             <br>
@@ -185,47 +222,49 @@
                                 En este pedido podrás incluir productos como: velas, menaje o textiles.
                                 Peso máximo del pedido: 25 kg (la suma del peso de todos los productos contenidos).
                                 Medidas máximas del embalaje de cada producto: 78,5 cm x 55 cm x 39 cm.
-                                Tu pedido se entregará en el rellano de tu casa.    
+                                Tu pedido se entregará en el rellano de tu casa.
                             </p>
                         </div>
                     </div>
 
-                    <div class="col-sm">
-                            
-                                <div>
-                                    <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
-                                    <br>
-                                    <br>
-                                    <b class="vw1 fuenteParrafo">
-                                        $ 400
-                                    </b>
-                                </div>
-                           
+                    <div class="w-50">
+
+                        <div>
+                            <strong class="border-bottom vw2 fuenteTitulo">Precio</strong>
+                            <br>
+                            <br>
+                            <b class="vw1 fuenteParrafo">
+                                $ 400
+                            </b>
+                        </div>
+
                     </div>
-                    
+
                 </div>
+            </div>
         </div>
 
-        
 
 
-    <!-- FIN DE CUERPO -->
 
-    <div class="mt-5 mb-5 MBS bordeTarjeta colorMadera">
-        <div class="text-center">
-            <h2 class="vw3 fuenteTitulo">
-                Mucho más que una caja de cartón, cuidamos de tu pedido
-            </h2>    
-            <p class="vw1 fuenteParrafo">
-                En estos momentos de incertidumbre nuestros esfuerzos en el servicio de transporte se centran en asegurar la calidad 
-                de las entregas y sobre todo, la seguridad de nuestros colaboradores, proveedores y clientes.
-                La preparación de nuestros envíos conlleva actualmente un proceso complejo. Nuestros envíos tienen una historia 
-                ¿Sabías que tu envío pasa por las manos de una persona que trabaja en logística, lo manipuló personalmente poniendo 
-                todo su empeño en cumplir las medidas de seguridad para salvaguardar la salud tanto de sus compañeros como de los clientes, 
-                y que después acabó en el vehículo de uno de nuestros transportistas que lo trató también con sumo cuidado, recorrió varios 
-                kilómetros y lo entregó con todo el cariño del mundo siguiendo nuestro nuevo protocolo de entrega?
-                Tenemos que garantizar seguridad en este proceso y que nuestros trabajadores dispongan de las mejores condiciones.
-            </p>
+        <!-- FIN DE CUERPO -->
+
+        <div class="mt-5 mb-5 MBS bordeTarjeta colorMadera">
+            <div class="text-center">
+                <h2 class="vw3 fuenteTitulo">
+                    Mucho más que una caja de cartón, cuidamos de tu pedido
+                </h2>
+                <p class="vw1 fuenteParrafo">
+                    En estos momentos de incertidumbre nuestros esfuerzos en el servicio de transporte se centran en asegurar la calidad
+                    de las entregas y sobre todo, la seguridad de nuestros colaboradores, proveedores y clientes.
+                    La preparación de nuestros envíos conlleva actualmente un proceso complejo. Nuestros envíos tienen una historia
+                    ¿Sabías que tu envío pasa por las manos de una persona que trabaja en logística, lo manipuló personalmente poniendo
+                    todo su empeño en cumplir las medidas de seguridad para salvaguardar la salud tanto de sus compañeros como de los clientes,
+                    y que después acabó en el vehículo de uno de nuestros transportistas que lo trató también con sumo cuidado, recorrió varios
+                    kilómetros y lo entregó con todo el cariño del mundo siguiendo nuestro nuevo protocolo de entrega?
+                    Tenemos que garantizar seguridad en este proceso y que nuestros trabajadores dispongan de las mejores condiciones.
+                </p>
+            </div>
         </div>
     </div>
 

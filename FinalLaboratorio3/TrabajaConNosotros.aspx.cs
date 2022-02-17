@@ -23,24 +23,25 @@ namespace FinalLaboratorio3
             {
                 if (fuCv.HasFile)
                 {
-                    if (!(File.Exists(Server.MapPath("~/Archivos" + fuCv.FileName))))
+                    if (!(File.Exists(Server.MapPath("~/Archivos/" + fuCv.FileName))))
                     {
-                        fuCv.SaveAs(Server.MapPath("~/Archivos" + fuCv.FileName));
-                        Response.Write($"<script> alert('Se subio tu cv') </script>");
+                        fuCv.SaveAs(Server.MapPath("Archivos" + fuCv.FileName));
+                        
+                        lArchivo.Text = "Se subio tu cv";
                     }
                     else
                     {
-                        Response.Write($"<script> alert('Ya existe un archivo con ese nombre') </script>");
+                        lArchivo.Text = "Ya existe un archivo con ese nombre";
                     }
                 }
                 else
                 {
-                    Response.Write($"<script> alert('Debes cargar un archivo') </script>");
+                    lArchivo.Text = "Debes cargar un archivo";
                 }
             }
             else
             {
-                Response.Write($"<script> alert('Solo cargar pdf') </script>");
+                lArchivo.Text = "Solo cargar pdf";
             }
         }
     }

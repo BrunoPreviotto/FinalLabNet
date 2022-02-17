@@ -134,6 +134,7 @@
     <Content Include="img\Oficina\Sillas\silla4.jpg" />
     <Content Include="img\telefonica.jpg" />
     <Content Include="Ingresa.aspx" />
+    <Content Include="js\mbs.js" />
     <Content Include="js\principal.js" />
     <Content Include="TrabajaConNosotros.aspx" />
     <Content Include="Web.config" />

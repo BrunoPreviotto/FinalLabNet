@@ -27,15 +27,21 @@ namespace FinalLaboratorio3
                 string[] us = u.Split(' ');
                 if (tbUsuario.Text.ToLower().Trim() == us[0] && tbContraseña.Text.ToLower().Trim() == us[1])
                 {
-                    Response.Write($"<script> alert('Bienvenido {tbUsuario.Text}') </script>");
+                    
+                    lIncorrecto.Text = "Bienvenido " + tbUsuario.Text;
                     tbUsuario.Text = "";
-                    lIncorrecto.Text = "";
+                    
+                    
+                    
                 }
                 else
                 {
-                   lIncorrecto.Text = "Usuario o contraseña incorrecto";
+                    tbUsuario.Text = "";
+                    lIncorrecto.Text = "";
+                    lIncorrecto.Text = "Usuario o contraseña incorrecto";
                 }
             }
+            
         }
 
         public void llenarUsuarios()

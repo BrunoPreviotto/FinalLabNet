@@ -8,6 +8,8 @@
 
 
         <title> Trabaja con nosotros </title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -42,7 +44,7 @@
 		 <div id="barraTrabaja">
    		 </div>
 	
-	<div class="container d-flex justify-content-center">
+	<div class="container d-flex justify-content-center mt-5 mb-5">
 		<div class="text-center colorMadera bordeTarjeta MBS">
 			<h1 class="fuenteTitulo">
 				Trabaja con nosotoros
@@ -61,7 +63,7 @@
 		</div>
 	</div>
 	
-	<div class="container">
+	<div class="container mt-5 mb-5">
 		<div class="d-flex justify-content-center text-center">
 			<form id="form1" runat="server">
 			   <div class="bordeTarjeta MBS colorMadera p-5">
@@ -70,7 +72,9 @@
 					<asp:FileUpload ID="fuCv" runat="server" Height="28px" Width="234px" />
 					<asp:Label ID="lPdf"  runat="server" Text="(Solo pdf)"></asp:Label>
 						<br /><br/>
-					<asp:Button CssClass="bordeTarjeta colorMadera MBS"  ID="btSubirCv" runat="server" Text="Subir" OnClick="bSubirCv_Click" />
+					<asp:Button CssClass="bordeTarjeta colorMadera MBS"  ID="btSubirCv" runat="server" Text="Subir" OnClick="bSubirCv_Click"/>
+				   <br />
+				   <asp:Label ID="lArchivo" CssClass="text-white" runat="server" Text=""></asp:Label>
 				</div>
 			</form>
 		 </div>
@@ -78,7 +82,7 @@
 		
 		
 	<!--PIE-->
-    	<div id="pieTrabaja">
-    	</div>
+    	<div id="pieTrabaja" class="mt-5">
+    	</div> 
 </body>
 </html>

@@ -4,8 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" href="principal.css"/>
+        <meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="css/principal.css"/>
+
 
 
         <title> Contancto </title>
@@ -17,7 +19,7 @@
 		
 		<script src="jquery-3.5.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="../js/principal.js"></script>
+		<script src="../js/mbs.js"></script>
 		<script src="https://kit.fontawesome.com/702052ce2d.js" crossorigin="anonymous"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -43,16 +45,16 @@
    		 </div>
     
     <div class="container mt-5">
-        <h1 class="bordeTarjeta colorMadera MBS  text-center fuenteTitulo">
+        <h1 class="vw4 bordeTarjeta colorMadera MBS  text-center fuenteTitulo">
             Bienvenido! Ingresa tu usuario y contraseña.
         </h1>
     </div>
 
     <div class="container d-flex justify-content-center align-items-center text-center mt-5">
 
-        <form class="mb-5 mt-5" id="form1" runat="server" >
+        <form class="mb-5 mt-5" id="form1" runat="server">
             <div class="bordeTarjeta colorMadera MBS pb-5 pl-5 pr-5">
-                <asp:Label ID="lIncorrecto" runat="server" Text="" ></asp:Label>
+                <asp:Label ID="lIncorrecto" CssClass="text-white" runat="server" Text="" ></asp:Label>
                 <br/>
                 <br/>
                 <asp:Label ID="lUsuario" runat="server" Text="Usuario"></asp:Label>
