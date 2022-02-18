@@ -37,16 +37,16 @@
             document.getElementById("flechasProdGrande").innerHTML = "expand_less";
         }
     });
-    
+
     $(".envioMediano").click(function () {
-       
+
         $(".envioMedianoTexto").fadeToggle();
-        
+
         if (document.getElementById("flechasProdMediano").textContent == "expand_less") {
             document.getElementById("flechasProdMediano").innerHTML = "expand_more";
         }
         else {
-            
+
             document.getElementById("flechasProdMediano").innerHTML = "expand_less";
         }
     });

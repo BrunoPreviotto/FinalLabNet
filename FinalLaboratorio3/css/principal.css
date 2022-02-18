@@ -62,7 +62,7 @@ body{
 .formOpinion{
 	width: 600px;
 	height: 500px;
-	font-size: 20px;
+	
 }
 
 .fuenteParrafo{
@@ -181,30 +181,47 @@ body{
 
 
 @media (max-width: 500px){
+
+	.vw8{
+		font-size: 35px;
+	}
+
+	.vw7{
+    	font-size: 30px;
+    }
+
+	.vw6{
+		font-size: 25px;	
+	}
+
+	.vw5{
+		font-size: 20px;
+	}
 	.vw4{
-		font-size: 12px;
+		font-size: 12px !important;
 	}
 
 	.vw3 {
-    	font-size: 9px;
+    	font-size: 9px !important;
     }
 
 	.vw2{
-		font-size: 6px;	
+		font-size: 6px !important;	
 	}
 
 	.vw1{
-		font-size: 9px;
+		font-size: 9px !important;
 	}
 
 	.flechaDesplegar{
-		width: 5px;
+		width: 5px !important;
 	}
 
 	.label{
-		width : 20px;
+		width : 20px !important;
 	}
 }
+
 
 	
 

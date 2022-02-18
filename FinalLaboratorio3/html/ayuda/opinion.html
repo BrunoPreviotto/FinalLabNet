@@ -1,82 +1,92 @@
 <html>
 <head>
-	<title> </title>
+		<title> Deja tu opinión </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- BOOOTSTRAP -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- CSS PRINCIPAL -->
 		<link rel="stylesheet" href="../../css/principal.css">
+		
+		<!--  JQUERY -->
 		<script src="jquery-3.5.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="../../js/principal.js"></script>
-		<script src="https://kit.fontawesome.com/60785176fe.js" crossorigin="anonymous"></script>
+		
+		<!-- SCRIPT PRINCIPAL -->
+		<script src="../../js/mbs.js"></script>
+		
+		<!-- ICONOS FONTAWESOME -->
+		<script src="https://kit.fontawesome.com/702052ce2d.js" crossorigin="anonymous"></script>
 
+		<!--FUENTES GOOGLE-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
-
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
-
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-
+		<!-- BARRA -->
 		<div id="barraOpinion">
 		</div>
 
 
 
 		<!-- OPINION -->
-	    <div class="container d-flex justify-content-center align-items-center mt-5">
-	    	<form name="formOpinion" class="colorMadera bordeTarjeta MBS formOpinion d-flex justify-content-center align-items-center">
+	    <div class="container">
+	    	<div class=" d-flex justify-content-center align-items-center mt-5">
+	    		<form name="formOpinion" class="colorMadera bordeTarjeta MBS formOpinion d-flex justify-content-center align-items-center was-validated">
 		    	<div class="form-group container w-75">
-		    		<b>Tu opinión es importante para nosotros y para el resto de los usuarios.</b>
+		    		
+		    		<!-- TITULO -->
+		    		<h1 style="font-size:25px" class="bordeTarjeta vw4 fuenteTitulo text-center">Tu opinión es importante para nosotros y para el resto de los usuarios</h1>
 		    		<br>
-			    	<label class="mt-4">
+			    	
+			    	<!-- NOMBRE -->
+			    	<label class="mt-4 vw3 fuenteParrafo">
 			    		Tu nombre:
 			    	</label>
 			    	<br>
-			    	<input type="text" class="form-control" placeholder="Tu nombre..." id="inNombre" name="iOpinion">
-			    	<label for="inOpinion">
+			    	<input type="text" class="form-control fuenteParrafo vw3" placeholder="Tu nombre..." id="inNombre" name="iOpinion" required>
+			    	
+			    	<!-- OPINION -->
+			    	<label for="inOpinion" class="mt-4 vw3 fuenteParrafo">
 			    		Deja tu opinión:
 			    	</label>
 			    	<br>
-			    	<input type="text" class="form-control" placeholder="Opinion..." id="inOpinion" name="iOpinion">
+			    	<input type="text" class="form-control fuenteParrafo vw3" placeholder="Opinion..." id="inOpinion" name="iOpinion" required>
 			    	<br>
-			    	<button  class="MBS colorMadera bordeTarjeta" type="button" onclick='opinion()'>
+			    	
+			    	<!-- BOTON -->
+			    	<button  class="MBS colorMadera bordeTarjeta vw3 fuenteParrafo" type="button" onclick='opinion()'>
 			    		Enviar
 			    	</button>
 			    	<br>	
 			    </div>
 		    </form>
+	    	</div>
 	    </div>
 
 	    <div class="row d-flex justify-content-center">
-			<div class="bordeTarjeta w-75 ">
+			<div class="bordeTop w-75  mt-5">
 
 		    </div>
 		</div>
-
-	    
 
 	    <div class="container mt-5">
 			<div id="parrafoOpinion">
 
 			</div>
 		</div>
+	    
 
-		<!--PIE-->
+	    <!--PIE-->
 		<div id="pieOpinion">
     	</div>
 </body>
