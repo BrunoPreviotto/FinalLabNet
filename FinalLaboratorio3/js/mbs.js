@@ -258,7 +258,7 @@ function insertarNav() {
     }
     if (document.getElementById("barraConsulta") != null && document.getElementById("pieConsulta") != null) {
         navEditado("barraConsulta", html + linkPrincipal, html + linkBarraMbs, retorno, linkIngresa);
-        pieEditado("pieConsulta", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, html + linkTrabaja);
+        pieEditado("pieConsulta", html + linkEnvio, html + linkVenta, html + linkAtencion, html + linkOpinion, linkTrabaja);
     }
     if (document.getElementById("barraIngresa") != null && document.getElementById("pieIngresa") != null) {
         navEditado("barraIngresa", html + linkPrincipal, html + linkBarraMbs, linkConsulta, retorno);
@@ -323,7 +323,7 @@ function navEditado(barra, link1, link2, link3, link4) {
 }
 
 function pieEditado(pie, link1, link2, link3, link4, link5) {
-    document.getElementById(pie).innerHTML = '<footer class="colorMadera pie bordeTarjeta">' +
+        document.getElementById(pie).innerHTML = '<footer class="colorMadera pie bordeTarjeta">' +
         ' <div class="row d-flex">' +
 
         '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +

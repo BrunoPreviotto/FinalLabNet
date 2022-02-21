@@ -148,7 +148,6 @@
     <Content Include="img\telefonica.jpg" />
     <Content Include="Ingresa.aspx" />
     <Content Include="js\mbs.js" />
-    <Content Include="js\principal.js" />
     <Content Include="TrabajaConNosotros.aspx" />
     <Content Include="Web.config" />
     <Content Include="Consulta.aspx" />

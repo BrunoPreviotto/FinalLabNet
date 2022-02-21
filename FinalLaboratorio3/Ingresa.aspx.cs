@@ -15,8 +15,7 @@ namespace FinalLaboratorio3
         
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            
+            //CARGA USUARIOS DESDE UN JSON
             llenarUsuarios();
             
 
@@ -24,17 +23,18 @@ namespace FinalLaboratorio3
 
         protected void btEntrar_Click(object sender, EventArgs e)
         {
-
+            //VALIDAR USUARIO
             bd.cargar();
             foreach (Usuarios u in bd.Valores)
             {
-                
+                //SI EXISTE EL USUARIO INGRESADO ACTIVA LA BIENVENIDA
                 if (u.Nombre.Equals(tbUsuario.Text) && u.Contraseña.Equals(tbContraseña.Text))
                 {
                     lIncorrecto.Text = "Bienvenido " + tbUsuario.Text;
                     tbUsuario.Text = "";
                     break;
                 }
+                //SI NO EXISTE USUARIO ACTIVA UDUARIO INCORRECTO
                 else
                 {
                     tbUsuario.Text = "";
@@ -47,22 +47,36 @@ namespace FinalLaboratorio3
 
         public void llenarUsuarios()
         {
+            //AÑADE USUARIOS A UNA LISTA (SOLO AÑADE, NO ELIMINA)
             List<String> lista = new List<string>();
             lista.Add("usuario 123");
             lista.Add("us 1234");
             lista.Add("usuarios 12345");
+            lista.Add("usuario1 12");
+            lista.Add("usuario2 222");
             Usuarios us;
             bd.cargar();
-            if (bd.buscar(lista))
+            
+            
+            
+
+            //ENTRA SI NO EXISTEN LOS USUARIOS
+            
+            //RECORRE CADA UNO DE LA LISTA Y COMPARA LOS USUARIOS ACTUALES SI NO ESTA LO AGREGA
+            foreach (string l in lista)
             {
-                foreach (string l in lista)
+                string[] s = l.Split(' ');
+                    
+                if (!(bd.buscar(s[0], s[1])))
                 {
-                    string[] xusuario = l.Split(' ');
-                    us = new Usuarios(xusuario[0], xusuario[1]);
+                    us = new Usuarios(s[0], s[1]);
                     bd.Insertar(us);
-                    bd.guardar();
                 }
+                    
             }
+
+            bd.guardar();
+            
                 
             
             

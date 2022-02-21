@@ -23,6 +23,7 @@ namespace FinalLaboratorio3
             {
                 if (fuCv.HasFile)
                 {
+
                     if (!(File.Exists(Server.MapPath("~/Archivos/" + fuCv.FileName))))
                     {
                         fuCv.SaveAs(Server.MapPath("Archivos" + fuCv.FileName));

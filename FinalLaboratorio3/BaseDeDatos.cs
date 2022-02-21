@@ -19,19 +19,24 @@ namespace FinalLaboratorio3
             this.ruta = ruta;
         }
 
+        //GUARDAR USUARIOS
         public void guardar()
         {
 
             try
             {
+                //SI EXISTE EL ARCHIVO NO LO CREA Y GUARDA EL USUARIO
                 if (File.Exists(ruta))
                 {
+                    
+                    File.Delete(ruta);
                     string texto = JsonConvert.SerializeObject(Valores);
                     File.WriteAllText(ruta, texto);
 
                 }
                 else
                 {
+                    //SI NO EXISTE EL ARCHIVO LO CREA Y GUARDA EL USUARIO
                     File.Create(ruta).Close();
                 }
             }
@@ -61,20 +66,19 @@ namespace FinalLaboratorio3
             Valores.Add(nuevo);
         }
 
-        public bool buscar(List<string> l)
+        public bool buscar(string nombre, string contraseña)
         {
-            foreach (string li in l)
+            
+            foreach (Usuarios li in valores)
             {
-                string[] listaxCargar = li.Split(' ');
-                foreach (Usuarios u in valores)
+                if (li.Nombre.Equals(nombre) && li.Contraseña.Equals(contraseña))
                 {
-                    if (!(u.Nombre.Equals(listaxCargar[0]) && u.Contraseña.Equals(listaxCargar[1])))
-                    {
-                        return false;
-                    }
+                    return true;
                 }
+
             }
-            return true;
+            return false;
+            
         }
     }
 }

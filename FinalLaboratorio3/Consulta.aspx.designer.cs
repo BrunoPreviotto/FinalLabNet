@@ -24,6 +24,15 @@ namespace FinalLaboratorio3
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// Control lenvio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lenvio;
+
+        /// <summary>
         /// Control lnombre.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace FinalLaboratorio3
         protected global::System.Web.UI.WebControls.TextBox tbnombre;
 
         /// <summary>
+        /// Control rnombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rnombre;
+
+        /// <summary>
         /// Control lemail.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,15 @@ namespace FinalLaboratorio3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
+
+        /// <summary>
+        /// Control remail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator remail;
 
         /// <summary>
         /// Control ltelefono.
@@ -87,6 +114,15 @@ namespace FinalLaboratorio3
         protected global::System.Web.UI.WebControls.TextBox tbtelefono;
 
         /// <summary>
+        /// Control rtelefono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rtelefono;
+
+        /// <summary>
         /// Control lasunto.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace FinalLaboratorio3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbasunto;
+
+        /// <summary>
+        /// Control rasunto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rasunto;
 
         /// <summary>
         /// Control lMayor.
@@ -141,6 +186,15 @@ namespace FinalLaboratorio3
         protected global::System.Web.UI.WebControls.TextBox tbEdad;
 
         /// <summary>
+        /// Control redad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator redad;
+
+        /// <summary>
         /// Control lconsulta.
         /// </summary>
         /// <remarks>
@@ -157,6 +211,15 @@ namespace FinalLaboratorio3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbconsulta;
+
+        /// <summary>
+        /// Control rconsulta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rconsulta;
 
         /// <summary>
         /// Control btconsulta.

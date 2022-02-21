@@ -25,21 +25,22 @@ namespace FinalLaboratorio3
         {
             switch (ValidarDatos())
             {
-                case 0:
-                    Response.Write("<script> alert('Campos vacios') </script>");
-                    break;
                 case 1:
-                    Response.Write("<script> alert('Numero incorrecto') </script>");
+                    //VALIDA TELEFONO
+                    rtelefono.IsValid = false;
                     break;
                 case 2:
-                    Response.Write("<script> alert('Nombre incorrecto incorrecto (debe tener un espacio y empezar con mayusculas)') </script>");
+                    //VALIDA NOMBRE
+                    rnombre.IsValid = false;
                     break;
                 case 3:
-                    Response.Write("<script> alert('Debes ser mayor de edad') </script>");
+                    //VALIDA EDAD
+                    redad.IsValid = false;
                     break;
                 default:
+                    //ENVIA MAIL
                     //EnviarMail(tbEmail.Text, tbnombre.Text, tbasunto.Text);
-                    Response.Write($"<script> alert('Consulta enviada con éxito! Enviamos un E-mail a {tbEmail.Text}') </script>");
+                    lenvio.Text = $"Consulta enviada con éxito!";
                     borrarDatos();
                     break;
             }
@@ -50,27 +51,26 @@ namespace FinalLaboratorio3
         {
 
             
-
+            //EXPRESION REGULAR TELEFONO
             Regex regexTelefono = new Regex("^[0-9]{6}$");
 
+            //EXPRESION REGULAR NOMBRE
             Regex regexNombre = new Regex("^[A-Z]{1}[a-z]{1,50}[' ']{1}[A-Z]{1}[a-z]{1,50}");
 
 
-
-            if (tbnombre.Text == "" || tbtelefono.Text == "" || tbEmail.Text == "" || tbconsulta.Text == "" || tbasunto.Text == "")
+            if(!(regexTelefono.IsMatch(tbtelefono.Text.Trim())))
             {
-                return 0;
-            }
-            else if(!(regexTelefono.IsMatch(tbtelefono.Text.Trim())))
-            {
+                //VALIDA TELEFONO
                 return 1;
             }
             else if(!(regexNombre.IsMatch(tbnombre.Text.Trim())))
             {
+                //VALIDA NOMBRE
                 return 2;
             }
             else if(Convert.ToInt32(tbEdad.Text) < 18)
             {
+                //VALIDA EDAD
                 return 3;
             }
             else
@@ -81,38 +81,51 @@ namespace FinalLaboratorio3
 
         public void EnviarMail(String correo, String nombre, String asunto)
         {
+            //ENVIAR MAIL
+            //CREAR MAIL
             MailMessage mail = new MailMessage();
+            //AGREGAR DIRECCION EMISOR
             mail.From = new MailAddress("brunopreviotto@zohomail.com");
+            //AGREGAR DIRECCION RECEPTOR
             mail.To.Add(correo);
+            //AGREGAR ASUNTO
             mail.Subject = asunto;
-            mail.Body = "Gracias" + nombre  + "por su consulta!";
+            //AGREGAR CUERPO MAIL
+            mail.Body = "Gracias " + nombre  + " por su consulta!";
+            
+            //CONFIGURAR SMTP
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.zoho.com";
             smtp.Port = 587;
             smtp.Credentials = new NetworkCredential("brunopreviotto@zoho.com", "finallaboratorio3");
             smtp.EnableSsl = true;
+            
             try
             {
+                //ENVIO
                 smtp.Send(mail);
             }
             catch (Exception e)
             {
-
+                Response.Write($"<script> alert('Mail {tbEmail.Text} no valido') </script>");
             }
         }
 
         public void borrarDatos()
         {
+            //BORRAR TODOS LOS DATOS INGRESADOS
             tbasunto.Text = "";
             tbconsulta.Text = "";
             tbEmail.Text = "";
             tbnombre.Text = "";
             tbasunto.Text = "";
             tbtelefono.Text = "";
+            tbEdad.Text = "";
         }
 
         public void rellenarDropDownList()
         {
+            //RRELLENAR DROPDOWNLIST
             int s= 0;
             for (int i=3000; i <= 4000; i++)
             {
@@ -124,6 +137,7 @@ namespace FinalLaboratorio3
 
         protected void rbEdad_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //AL SELECCIONAR NO EN MAYOR DE EDAD DESACTIVAR COMENTARIOS
             string curItem = rbEdad.SelectedItem.Value.ToString();
             if (curItem.Equals("2"))
             {
