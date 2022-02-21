@@ -1,13 +1,16 @@
 ﻿$(document).ready(function () {
-
+    
+    //OCULTAR PRODUCTOS
     $(".listaLado").hide();
 
+    //OCULTAR ENVIOS
     $(".envioMedianoTexto").hide();
 
     $(".envioGrandeTexto").hide();
 
     $(".envioPequeñoTexto").hide();
 
+    //SETEAR ICONOS FLECHAS 
     $("#flechasProdGrande").html("expand_less");
 
     $("#flechasProdMediano").html("expand_less");
@@ -16,6 +19,7 @@
 
     $("#flechasProd").html("expand_less");
 
+    //CAMBIAR FLECHAS
     $(".listasProductos").click(function () {
         if ($("#flechasProd").text() == "expand_less") {
             document.getElementById("flechasProd").innerHTML = "expand_more";
@@ -64,8 +68,8 @@
 
 
 
-
-    $.getJSON("../../../js/productos.json", function (data, textStatus) {
+    //CARGAR JSON CON AJAX
+    $.getJSON("../../../js/cargproductos.json", function (data, textStatus) {
 
         if (textStatus == "success")
             for (x of data.Productos) {
@@ -97,7 +101,7 @@
 
 
 
-
+    //FUNCION PARA CARGAR JSON
     function carga(x, prod) {
         b = document.createElement("b");
         b = "$ " + x.Precio;
@@ -146,6 +150,7 @@
 
     }
 
+    //CARGAR PIE Y BARRA DE NAVEGACION
     insertarNav();
 
 
@@ -153,7 +158,7 @@
 
 });
 
-
+//FUNCION PARA CARGAR BARRA Y PIE
 function insertarNav() {
 
     var unaBarra = "../";
@@ -274,7 +279,7 @@ function insertarNav() {
 
 
 
-
+//AGREGAR OPINIONES
 function opinion() {
     let opinion = document.getElementById('inOpinion').value;
     let nombre = document.getElementById('inNombre').value;
@@ -294,7 +299,7 @@ function opinion() {
     }
 
 }
-
+//BARRA
 function navEditado(barra, link1, link2, link3, link4) {
     document.getElementById(barra).innerHTML = '<nav class="navbar navbar-expand-md colorMadera container-fluid bordeTarjeta">' +
         '<b class="navbar-brand MBS fuenteTitulo vw4">MBS</b>' +
@@ -321,9 +326,9 @@ function navEditado(barra, link1, link2, link3, link4) {
         '</div>' +
         '</nav>';
 }
-
+//PIE
 function pieEditado(pie, link1, link2, link3, link4, link5) {
-        document.getElementById(pie).innerHTML = '<footer class="colorMadera pie bordeTarjeta">' +
+    document.getElementById(pie).innerHTML = '<footer class="container-fluid colorMadera pie bordeTarjeta">' +
         ' <div class="row d-flex">' +
 
         '<div class="col-sm-12 col-md-12 col-lg col-xl mt-3">' +
@@ -364,139 +369,3 @@ function pieEditado(pie, link1, link2, link3, link4, link5) {
 }
 
 
-
-var Productos = [
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Alacena",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Alacena/alacena1.webp",
-        'Descripcion': 'Alacena 1.60 Mts. Color blanco',
-        'Cuotas': 'Hasta 12 cuotas sin interes',
-        'llegada': 'llega mañana'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Despensero",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Despensero/despensero1.jpg",
-        'Descripcion': 'Alacena 1.60 Mts. Color marron',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Bajo-mesada",
-        'Marca': "Mosconi",
-        'Precio': 6000,
-        'Imagen': "../../../img/Cocina/Bajo mesada/mesada2.jpg",
-        'Descripcion': 'Alacena 40 Cts. Color blanco',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Alacena",
-        'Marca': "Mosconi",
-        'Precio': 9000,
-        'Imagen': "../../../img/Cocina/Alacena/alacena3.jpg",
-        'Descripcion': 'Alacena 1.20 Mts. Color blanco',
-        'Cuotas': 'hasta 6 cuotas sin interes',
-        'llegada': 'llega mañana'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Bajo-mesada",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Bajo mesada/mesada1.jpg",
-        'Descripcion': 'Alacena 1.60 Mts. Color blanco',
-        'Cuotas': 'Hasta 12 cuotas sin interes',
-        'llegada': 'llega mañana'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Despensero",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Despensero/despensero4.jpg",
-        'Descripcion': 'Alacena 1.60 Mts. Color marron',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Bajo-mesada",
-        'Marca': "Mosconi",
-        'Precio': 6000,
-        'Imagen': "../../../img/Cocina/Bajo mesada/mesada3.jpg",
-        'Descripcion': 'Alacena 40 Cts. Color blanco',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Alacena",
-        'Marca': "Mosconi",
-        'Precio': 9000,
-        'Imagen': "../../../img/Cocina/Alacena/alacena4.jpg",
-        'Descripcion': 'Alacena 1.20 Mts. Color blanco',
-        'Cuotas': 'hasta 6 cuotas sin interes',
-        'llegada': 'llega mañana'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Despensero",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Despensero/despensero3.jpg",
-        'Descripcion': 'Alacena 1.60 Mts. Color blanco',
-        'Cuotas': 'Hasta 12 cuotas sin interes',
-        'llegada': 'llega mañana'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Despensero",
-        'Marca': "Mosconi",
-        'Precio': 12000,
-        'Imagen': "../../../img/Cocina/Despensero/despensero2.jpg",
-        'Descripcion': 'Alacena 1.60 Mts. Color marron',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Alacena",
-        'Marca': "Mosconi",
-        'Precio': 6000,
-        'Imagen': "../../../img/Cocina/Alacena/alacena2.jpg",
-        'Descripcion': 'Alacena 40 Cts. Color blanco',
-        'Cuotas': 'hasta 12 cuotas sin interes',
-        'llegada': 'llega el lunes'
-    },
-
-    {
-        'Categoria': 'Cocina',
-        'Nombre': "Bajo-mesada",
-        'Marca': "Mosconi",
-        'Precio': 9000,
-        'Imagen': "../../../img/Cocina/Bajo mesada/mesada4.jpg",
-        'Descripcion': 'Alacena 1.20 Mts. Color blanco',
-        'Cuotas': 'hasta 6 cuotas sin interes',
-        'llegada': 'llega mañana'
-    }
-
-]

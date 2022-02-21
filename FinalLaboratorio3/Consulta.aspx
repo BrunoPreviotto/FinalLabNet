@@ -23,7 +23,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		
         <!-- SCRIPT PRINCIPAL -->
-        <script src="js/mbs.js"></script>
+        <script src="js/scrprincipal.js"></script>
 		
         <!-- ICONOS FONT AWESOME -->
         <script src="https://kit.fontawesome.com/702052ce2d.js" crossorigin="anonymous"></script>

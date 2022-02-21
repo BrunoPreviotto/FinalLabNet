@@ -84,7 +84,6 @@
     <Content Include="html\ayuda\atencion.html" />
     <Content Include="html\ayuda\opinion.html" />
     <Content Include="html\mbs\sobreMBS.html" />
-    <Content Include="html\mbs\trabaja.html" />
     <Content Include="html\Principal\principal.html" />
     <Content Include="html\Productos\Cocina\alacena.html" />
     <Content Include="html\Productos\Cocina\bajoMesada.html" />
@@ -147,7 +146,7 @@
     <Content Include="img\Oficina\Sillas\silla4.jpg" />
     <Content Include="img\telefonica.jpg" />
     <Content Include="Ingresa.aspx" />
-    <Content Include="js\mbs.js" />
+    <Content Include="js\scrprincipal.js" />
     <Content Include="TrabajaConNosotros.aspx" />
     <Content Include="Web.config" />
     <Content Include="Consulta.aspx" />
@@ -182,7 +181,7 @@
     <Content Include="img\Cocina\Alacena\alacena1.webp" />
     <Content Include="img\descuento.webp" />
     <Content Include="img\diversidad.avif" />
-    <Content Include="js\productos.json" />
+    <Content Include="js\cargproductos.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
