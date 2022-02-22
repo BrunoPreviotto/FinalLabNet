@@ -75,7 +75,7 @@
             for (x of data.Productos) {
 
 
-
+                
                 if (x.Nombre == "Bajo-mesada" && document.getElementById("productosBajo-mesada") != null) {
                     carga(x, document.getElementById("productosBajo-mesada"));
 

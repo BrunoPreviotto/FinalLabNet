@@ -39,7 +39,7 @@ namespace FinalLaboratorio3
                     break;
                 default:
                     //ENVIA MAIL
-                    //EnviarMail(tbEmail.Text, tbnombre.Text, tbasunto.Text);
+                    EnviarMail(tbEmail.Text, tbnombre.Text, tbasunto.Text);
                     lenvio.Text = $"Consulta enviada con éxito!";
                     borrarDatos();
                     break;

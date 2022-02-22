@@ -16,9 +16,11 @@ namespace FinalLaboratorio3
         protected void Page_Load(object sender, EventArgs e)
         {
             //CARGA USUARIOS DESDE UN JSON
-            llenarUsuarios();
+            if (!IsPostBack)
+            {
+                llenarUsuarios();
+            }
             
-
         }
 
         protected void btEntrar_Click(object sender, EventArgs e)
